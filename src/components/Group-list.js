@@ -2,6 +2,7 @@ import GroupTemplate from "./GroupTemplate";
 import details from "./GroupDetails";
 import { Route } from "react-router-dom";
 import { useState } from 'react';
+import ChatBox from "./ChatBox";
 const GroupList = () => {
     const [text, setText] = useState('');
     const [filteredData, setFilterData] = useState([]);
@@ -22,7 +23,10 @@ const GroupList = () => {
           <input  className="customInput" type="text" value={text} onChange={handleChange} />
                 {/* <TextInput text={text} setText={setText} /> */}
             </div>
-            {
+
+            <ChatBox />
+
+            {/* {
             filteredData.length>0 && 
                 
                 filteredData.map(detail => {
@@ -47,7 +51,7 @@ const GroupList = () => {
             
                 
                 )
-            }
+            } */}
             
 
         </>
